@@ -1,6 +1,6 @@
-package com.tphtwe.newswide.model
+package com.tphtwe.newswide.model.model1
 
-data class AllCountryItem(
+data class AllCountry1Item(
     val active: Int,
     val activePerOneMillion: Double,
     val cases: Int,
@@ -9,9 +9,9 @@ data class AllCountryItem(
     val country: String,
     val countryInfo: CountryInfo,
     val critical: Int,
-    val criticalPerOneMillion: Int,
+    val criticalPerOneMillion: Double,
     val deaths: Int,
-    val deathsPerOneMillion: Int,
+    val deathsPerOneMillion: Double,
     val oneCasePerPeople: Int,
     val oneDeathPerPeople: Int,
     val oneTestPerPeople: Int,

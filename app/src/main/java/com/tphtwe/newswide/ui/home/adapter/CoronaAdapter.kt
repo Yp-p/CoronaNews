@@ -7,18 +7,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.tphtwe.newswide.R
-import com.tphtwe.newswide.model.AllCountryItem
+import com.tphtwe.newswide.model.model1.AllCountry1Item
 import kotlinx.android.synthetic.main.item_corona_country.view.*
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 
-class CoronaAdapter (var listCountry:List<AllCountryItem> = ArrayList<AllCountryItem>()):RecyclerView.Adapter<CoronaAdapter.CoronaViewHolder>(){
+class CoronaAdapter (var listCountry:List<AllCountry1Item> = ArrayList<AllCountry1Item>()):RecyclerView.Adapter<CoronaAdapter.CoronaViewHolder>(){
     class CoronaViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
-        fun bind(allCountryItem: AllCountryItem){
-            Picasso.get().load(allCountryItem.countryInfo.flag)
+        fun bind(allCountryItem: AllCountry1Item){
+            Picasso.get().load(allCountryItem.countryInfo.flag).into(itemView.flagValue)
             itemView.nameValue.text=allCountryItem.country
         }
     }
-    fun updateCountry(Countrylist:List<AllCountryItem>){
-        this.listCountry=Countrylist
+    fun updateCountry(countrylist:List<AllCountry1Item>){
+        this.listCountry=countrylist
         notifyDataSetChanged()
 
     }

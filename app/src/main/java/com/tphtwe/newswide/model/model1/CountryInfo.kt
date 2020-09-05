@@ -1,10 +1,10 @@
-package com.tphtwe.newswide.model
+package com.tphtwe.newswide.model.model1
 
 data class CountryInfo(
     val _id: Int,
     val flag: String,
     val iso2: String,
     val iso3: String,
-    val lat: Int,
-    val long: Int
+    val lat: Double,
+    val long: Double
 )
